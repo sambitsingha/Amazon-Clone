@@ -1,7 +1,7 @@
 @media only screen and (max-width: 500px) {
 	.hero-section {
 		background-image: url(images/bg-image.jpeg);
-		background-size: contain;
+		background-size: cover;
 		height: auto;
 		padding-bottom: 20px;
 	}
@@ -10,8 +10,12 @@
 	}
 	.outer-div {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
+		align-items: center;
+		transform: translateX(-10px);
+	}
+	.inner-div {
+		display: flex;
 	}
 	#signin {
 		padding: 8px 16px;
@@ -22,7 +26,7 @@
 	.text-field {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+
 		align-items: center;
 		margin-top: 50px;
 		color: white;
@@ -30,7 +34,7 @@
 		text-align: center;
 	}
 	#first {
-		font-size: 30px;
+		font-size: 35px;
 		text-align: center;
 		font-weight: 900;
 	}
