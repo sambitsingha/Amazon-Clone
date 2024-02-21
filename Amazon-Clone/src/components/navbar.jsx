@@ -3,18 +3,9 @@ import logo from "../assets/amazon-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import flag from "../assets/Flag_of_India.png";
-import {
-	Drawer,
-	Button,
-	Typography,
-	IconButton,
-} from "@material-tailwind/react";
+
 const Navbar = () => {
-	const [open, setOpen] = React.useState(false);
-
-	const openDrawer = () => setOpen(true);
-	const closeDrawer = () => setOpen(false);
-
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<>
 			<nav className='h-14 w-full flex justify-around items-center bg-slate-900 m-auto px-2 text-white'>
@@ -60,40 +51,64 @@ const Navbar = () => {
 					Cart
 				</div>
 			</nav>
-			<nav className='h-10 w-full flex justify-around items-center bg-blue-900 m-auto px-2 text-white'>
-				<Button onClick={openDrawer}>Open Drawer</Button>
-				<Drawer open={open} onClose={closeDrawer} className='p-4'>
-					<div className='mb-6 flex items-center justify-between'>
-						<Typography variant='h5' color='blue-gray'>
-							Material Tailwind
-						</Typography>
-						<IconButton variant='text' color='blue-gray' onClick={closeDrawer}>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								fill='none'
-								viewBox='0 0 24 24'
-								strokeWidth={2}
-								stroke='currentColor'
-								className='h-5 w-5'>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									d='M6 18L18 6M6 6l12 12'
-								/>
-							</svg>
-						</IconButton>
+			<nav className='h-10 w-full flex justify-around items-center bg-slate-800 m-auto px-2 text-white'>
+				<div className='hover:border-white hover:border h-full flex items-center p-1'>
+					<button
+						onClick={() => setIsOpen(!isOpen)}
+						className='flex justify-between items-center w-12 font-bold'>
+						<div className='flex-col '>
+							<div className='w-5 h-[3px] bg-white flex flex-col justify-center items-center my-1'></div>
+							<div className='w-5 h-[3px] bg-white flex flex-col justify-center items-center my-1'></div>
+							<div className='w-5 h-[3px] my-1 bg-white flex flex-col justify-center items-center'></div>
+						</div>
+						All
+					</button>
+					<div
+						className={`fixed top-0 left-0 h-screen overflow-hidden transition-all duration-500 bg-gray-200 p-5 transform ${
+							isOpen ? "translate-x-0 w-80" : "-translate-x-full"
+						}`}>
+						<p>Drawer Content</p>
 					</div>
-					<Typography color='gray' className='mb-8 pr-4 font-normal'>
-						Material Tailwind features multiple React and HTML components, all
-						written with Tailwind CSS classes and Material Design guidelines.
-					</Typography>
-					<div className='flex gap-2'>
-						<Button size='sm' variant='outlined'>
-							Documentation
-						</Button>
-						<Button size='sm'>Get Started</Button>
-					</div>
-				</Drawer>
+				</div>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Fresh
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Amazon Mini TV
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Sell
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Bets sellers
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Today's deals
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Customer service
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Electronics
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					New Releases
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Prime
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Fashion
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Gift Ideas
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Home & Kitchen
+				</h1>
+				<h1 className='hover:border-white hover:border h-full flex items-center p-1'>
+					Amazon Pay
+				</h1>
 			</nav>
 		</>
 	);
