@@ -65,8 +65,13 @@ const Navbar = () => {
 					</button>
 					<div
 						className={`fixed top-0 left-0 h-screen overflow-hidden transition-all duration-500 bg-gray-200 p-5 transform ${
-							isOpen ? "translate-x-0 w-80" : "-translate-x-full"
+							isOpen ? "translate-x-0 w-80 z-10" : "-translate-x-full"
 						}`}>
+						<button
+							onClick={() => setIsOpen(false)}
+							className='absolute top-5 right-5 bg-red-500 text-white rounded-full py-2 px-4'>
+							X
+						</button>
 						<p>Drawer Content</p>
 					</div>
 				</div>
