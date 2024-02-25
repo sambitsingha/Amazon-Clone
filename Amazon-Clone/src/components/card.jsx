@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 const Card = () => {
 	return (
-		<section className='flex justify-around items-center overflow-x-hidden'>
+		<section className='flex justify-around items-center overflow-x-hidden '>
 			<Item heading={card1.heading} items={card1.items} />
 			<Item heading={card2.heading} items={card2.items} />
 			<Item heading={card3.heading} items={card3.items} />
