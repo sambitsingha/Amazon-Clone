@@ -19,6 +19,52 @@ const Footer = () => {
 			<div className='w-full bg-slate-700 text-center text-white py-4'>
 				<h1>Back to Top</h1>
 			</div>
+			<footer className='flex flex-col justify-around items-center pt-5 bg-slate-800 text-white'>
+				<div>
+					<div>
+						<h1 className='font-bold'>Get to Know Us</h1>
+						<ul className='text-sm'>
+							<li>About us</li>
+							<li>Careers</li>
+							<li>Press releases</li>
+							<li>Amazon Science</li>
+						</ul>
+					</div>
+					<div>
+						<h1 className='font-bold'>Connect with us</h1>
+						<ul className='text-sm'>
+							<li>Facebook</li>
+							<li>Twitter</li>
+							<li>Instagram</li>
+						</ul>
+					</div>
+					<div>
+						<h1 className='font-bold'>Make Money with Us</h1>
+						<ul className='text-sm'>
+							<li>Sell on Amazon</li>
+							<li>Sell under Amazon Accelerator</li>
+							<li>Protect and build your brand</li>
+							<li>Become an affiliate</li>
+							<li>Amaxon Global Selling</li>
+							<li>Fulfilment by Amazon</li>
+							<li>Advertise your products</li>
+							<li>Amazon pay on Merchants</li>
+						</ul>
+					</div>
+					<div>
+						<h1 className='font-bold'>Let Us help You</h1>
+						<ul className='text-sm'>
+							<li>Your account</li>
+							<li>Returns Center</li>
+							<li>COVID-19 and Amazon</li>
+							<li>100% Purchase Protection</li>
+							<li>Amazon App Download</li>
+							<li>Help</li>
+						</ul>
+					</div>
+				</div>
+				<hr className='w-full' />
+			</footer>
 		</>
 	);
 };
