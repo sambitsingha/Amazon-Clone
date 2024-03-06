@@ -3,6 +3,7 @@ import logo from "../assets/Amazon-Emblem.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import flag from "../assets/Flag_of_India.png";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
 	return (
 		<>
@@ -10,7 +11,7 @@ const Navbar = () => {
 				<img src={logo} alt='' className='w-28' />
 				<div>
 					<p className='text-sm'>Delivering to Kolkata 700047</p>
-					<p className='text-sm'>Update location</p>
+					<p className='text-sm font-bold'>Update location</p>
 				</div>
 				<form action='#'>
 					<input
@@ -21,15 +22,24 @@ const Navbar = () => {
 					<button
 						type='submit'
 						className='h-10 w-10 bg-yellow-600 rounded-r-md'>
-						<FontAwesomeIcon
-							icon={faMagnifyingGlass}
-							style={{ color: "#ffffff" }}
-						/>
+						<FontAwesomeIcon icon={faMagnifyingGlass} />
 					</button>
 				</form>
-				<div>
-					<img src={flag} alt='' className='w-8' />
+				<div className='flex'>
+					<img src={flag} alt='' className='w-8 mx-2' />
 					<h1>EN</h1>
+				</div>
+				<div>
+					<p className='text-sm'>Hello, Sign in</p>
+					<p className='font-bold text-sm'>Acconts and lists</p>
+				</div>
+				<div>
+					<p className='text-sm'>Returns</p>
+					<p className='font-bold text-sm'>& Orders</p>
+				</div>
+				<div className='flex justify-between items-end'>
+					<FontAwesomeIcon icon={faCartShopping} className='text-3xl' />
+					<p className='font-bold text-sm'>Cart</p>
 				</div>
 			</nav>
 		</>
