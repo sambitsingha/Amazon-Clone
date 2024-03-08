@@ -4,24 +4,69 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import flag from "../assets/Flag_of_India.png";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
 const Navbar = () => {
+	const [open, setOpen] = React.useState(false);
+
+	const toggleDrawer = (newOpen) => () => {
+		setOpen(newOpen);
+	};
+
+	const DrawerList = (
+		<Box sx={{ width: 250 }} role='presentation' onClick={toggleDrawer(false)}>
+			<List>
+				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+					<ListItem key={text} disablePadding>
+						<ListItemButton>
+							<ListItemIcon>
+								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+							</ListItemIcon>
+							<ListItemText primary={text} />
+						</ListItemButton>
+					</ListItem>
+				))}
+			</List>
+			<Divider />
+			<List>
+				{["All mail", "Trash", "Spam"].map((text, index) => (
+					<ListItem key={text} disablePadding>
+						<ListItemButton>
+							<ListItemIcon>
+								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+							</ListItemIcon>
+							<ListItemText primary={text} />
+						</ListItemButton>
+					</ListItem>
+				))}
+			</List>
+		</Box>
+	);
 	return (
 		<>
-			<nav className='w-full bg-slate-900 px-5 flex flex-wrap justify-between items-center text-white'>
-				<div className='flex items-center space-x-4 w-full sm:w-auto'>
-					<img src={logo} alt='' className='w-28' />
-					<div className='hidden sm:block'>
-						<p className='text-sm'>Delivering to Kolkata 700047</p>
-						<p className='text-sm font-bold'>Update location</p>
-					</div>
+			<nav className='w-full h-16 bg-slate-900 px-5 flex text-white justify-around items-center'>
+				<img src={logo} alt='' className='md:w-24 lg:w-28 w-16' />
+				<div className='mx-3'>
+					<p className='lg:text-sm md:text-xs text-[10px]'>
+						Delivering to Kolkata 700047
+					</p>
+					<p className='lg:text-sm md:text-xs text-[10px] font-bold'>
+						Update location
+					</p>
 				</div>
-				<form
-					action='#'
-					className='flex items-center w-full sm:w-auto mt-4 sm:mt-0'>
+				<form action='#'>
 					<input
 						type='text'
-						className='h-10 w-full sm:w-96 p-2 rounded-l-md'
+						className='h-10 lg:w-80 md:w-56 sm:w-52 w-40 p-2 rounded-l-md'
 						placeholder='Search Amazon.in'
 					/>
 					<button
@@ -30,24 +75,36 @@ const Navbar = () => {
 						<FontAwesomeIcon icon={faMagnifyingGlass} />
 					</button>
 				</form>
-
-				<div className='flex items-center space-x-2 mt-4 sm:mt-0'>
-					<div className='hidden sm:block'>
-						<img src={flag} alt='' className='w-8' />
-						<h1 className='text-xs'>EN</h1>
-					</div>
-					<div className='hidden sm:block'>
-						<p className='text-sm'>Hello, Sign in</p>
-						<p className='font-bold text-sm'>Accounts and lists</p>
-					</div>
-					<div className='hidden sm:block'>
-						<p className='text-sm'>Returns</p>
-						<p className='font-bold text-sm'>& Orders</p>
-					</div>
-					<div className='flex items-center'>
-						<FontAwesomeIcon icon={faCartShopping} className='text-3xl' />
-						<p className='font-bold text-sm ml-1'>Cart</p>
-					</div>
+				<div className='flex mx-2 '>
+					<img src={flag} alt='' className='w-8 mx-1' />
+					<h1>EN</h1>
+				</div>
+				<div>
+					<p className='lg:text-sm md:text-xs text-[10px]'>Hello, Sign in</p>
+					<p className='font-bold lg:text-sm md:text-xs text-[10px]'>
+						Acconts and lists
+					</p>
+				</div>
+				<div>
+					<p className='lg:text-sm md:text-xs text-[10px]'>Returns</p>
+					<p className='font-bold lg:text-sm md:text-xs text-[10px]'>
+						& Orders
+					</p>
+				</div>
+				<div className='flex justify-between items-end '>
+					<FontAwesomeIcon
+						icon={faCartShopping}
+						className='lg:text-3xl md:text-xl text-xs'
+					/>
+					<p className='font-bold lg:text-sm md:text-xs text-[10px]'>Cart</p>
+				</div>
+			</nav>
+			<nav>
+				<div>
+					<Button onClick={toggleDrawer(true)}>Open drawer</Button>
+					<Drawer open={open} onClose={toggleDrawer(false)}>
+						{DrawerList}
+					</Drawer>
 				</div>
 			</nav>
 		</>
