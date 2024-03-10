@@ -66,7 +66,7 @@ const Navbar = () => {
 				<form action='#'>
 					<input
 						type='text'
-						className='h-10 lg:w-80 md:w-56 sm:w-52 w-40 p-2 rounded-l-md'
+						className='h-10 lg:w-96 md:w-56 sm:w-52 w-40 p-2 rounded-l-md'
 						placeholder='Search Amazon.in'
 					/>
 					<button
@@ -99,13 +99,55 @@ const Navbar = () => {
 					<p className='font-bold lg:text-sm md:text-xs text-[10px]'>Cart</p>
 				</div>
 			</nav>
-			<nav>
+			<nav className='h-10 w-full bg-slate-800 text-white flex justify-between items-center px-5'>
 				<div>
-					<Button onClick={toggleDrawer(true)}>Open drawer</Button>
+					<Button onClick={toggleDrawer(true)}>All</Button>
 					<Drawer open={open} onClose={toggleDrawer(false)}>
 						{DrawerList}
 					</Drawer>
 				</div>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Fresh
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Amazon MiniTV
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Sell
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Best Sellers
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Mobile
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Electronics
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Prime
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Prime
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Customer Service
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					New Releases
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Home & Kitchen
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Gift Ideas
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Fashion
+				</h1>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
+					Amazon Pay
+				</h1>
 			</nav>
 		</>
 	);
