@@ -3,7 +3,7 @@ import { Carousel } from "flowbite-react";
 const Hero = () => {
 	return (
 		<>
-			<div className='h-screen'>
+			<div className='lg:h-96 md:h-80 sm:h-72 h-60 w-full'>
 				<Carousel>
 					<img
 						src='https://m.media-amazon.com/images/I/61aURrton0L._SX3000_.jpg'
