@@ -1,5 +1,6 @@
-import Hero from "./components/Carousel";
-import Navbar from "./components/Navbar";
+import Hero from "./components/carousel";
+import Navbar from "./components/navbar";
+
 const App = () => {
 	return (
 		<>
