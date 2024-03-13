@@ -106,16 +106,16 @@ const Navbar = () => {
 						{DrawerList}
 					</Drawer>
 				</div>
-				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border lg:text- md:text-[10px] mx-1'>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
 					Fresh
 				</h1>
-				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border lg:text-md md:text-[10px] mx-1'>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
 					Amazon MiniTV
 				</h1>
-				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border lg:text-md md:text-[10px] mx-1'>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
 					Sell
 				</h1>
-				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border lg:text-md md:text-[10px] mx-1'>
+				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
 					Best Sellers
 				</h1>
 				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
