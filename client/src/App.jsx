@@ -10,6 +10,7 @@ const App = () => {
 			<Hero />
 			<Card />
 			<HScroll />
+			<Card />
 		</>
 	);
 };

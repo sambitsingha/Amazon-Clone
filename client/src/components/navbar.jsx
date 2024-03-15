@@ -23,9 +23,25 @@ const Navbar = () => {
 	};
 
 	const DrawerList = (
-		<Box sx={{ width: 250 }} role='presentation' onClick={toggleDrawer(false)}>
-			<List>
-				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+		<Box sx={{ width: 300 }} role='presentation' onClick={toggleDrawer(false)}>
+			<List disablePadding>
+				<ListItem disablePadding>
+					<ListItemText className='m-0'>
+						<div className='h-10 bg-slate-800 mt-0 text-white flex items-center font-bold text-xl px-5'>
+							Hello , Sign In
+						</div>
+					</ListItemText>
+				</ListItem>
+				<ListItem>
+					<ListItemText>
+						<h1 className='text-black text-xl font-bold'>Shop by Category</h1>
+					</ListItemText>
+				</ListItem>
+				{[
+					"Mobiles , Computers",
+					"Men's Fashion",
+					"Sports, Fitness bags and lugage",
+				].map((text, index) => (
 					<ListItem key={text} disablePadding>
 						<ListItemButton>
 							<ListItemIcon>
@@ -37,7 +53,7 @@ const Navbar = () => {
 				))}
 			</List>
 			<Divider />
-			<List>
+			{/* <List>
 				{["All mail", "Trash", "Spam"].map((text, index) => (
 					<ListItem key={text} disablePadding>
 						<ListItemButton>
@@ -48,7 +64,7 @@ const Navbar = () => {
 						</ListItemButton>
 					</ListItem>
 				))}
-			</List>
+			</List> */}
 		</Box>
 	);
 	return (
