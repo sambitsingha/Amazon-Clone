@@ -17,54 +17,46 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 const Navbar = () => {
 	const [open, setOpen] = React.useState(false);
-
+	const [selectedCategory, setSelectedCategory] = React.useState(null);
+	const categories = [
+		{
+			name: "Mobiles , Computers",
+			subcategories: ["Mobiles", "Laptops", "Desktops"],
+		},
+		{ name: "Men's Fashion", subcategories: ["Shirts", "Pants", "Shoes"] },
+		{
+			name: "Sports, Fitness bags and lugage",
+			subcategories: ["Sports", "Fitness", "Bags"],
+		},
+	];
 	const toggleDrawer = (newOpen) => () => {
 		setOpen(newOpen);
 	};
+	const handleClick = (item) => {
+		if (item.subcategories) {
+			setSelectedCategory(item.subcategories);
+		} else {
+			toggleDrawer(false);
+		}
+	};
 
 	const DrawerList = (
-		<Box sx={{ width: 300 }} role='presentation' onClick={toggleDrawer(false)}>
+		<Box sx={{ width: 300 }} role='presentation'>
 			<List disablePadding>
-				<ListItem disablePadding>
-					<ListItemText className='m-0'>
-						<div className='h-10 bg-slate-800 mt-0 text-white flex items-center font-bold text-xl px-5'>
-							Hello , Sign In
-						</div>
-					</ListItemText>
-				</ListItem>
-				<ListItem>
-					<ListItemText>
-						<h1 className='text-black text-xl font-bold'>Shop by Category</h1>
-					</ListItemText>
-				</ListItem>
-				{[
-					"Mobiles , Computers",
-					"Men's Fashion",
-					"Sports, Fitness bags and lugage",
-				].map((text, index) => (
-					<ListItem key={text} disablePadding>
-						<ListItemButton>
-							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-							</ListItemIcon>
-							<ListItemText primary={text} />
-						</ListItemButton>
-					</ListItem>
-				))}
+				{(selectedCategory ? selectedCategory : categories).map(
+					(item, index) => (
+						<ListItem key={item.name || item} disablePadding>
+							<ListItemButton onClick={() => handleClick(item)}>
+								<ListItemIcon>
+									{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+								</ListItemIcon>
+								<ListItemText primary={item.name || item} />
+							</ListItemButton>
+						</ListItem>
+					)
+				)}
 			</List>
 			<Divider />
-			{/* <List>
-				{["All mail", "Trash", "Spam"].map((text, index) => (
-					<ListItem key={text} disablePadding>
-						<ListItemButton>
-							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-							</ListItemIcon>
-							<ListItemText primary={text} />
-						</ListItemButton>
-					</ListItem>
-				))}
-			</List> */}
 		</Box>
 	);
 	return (
