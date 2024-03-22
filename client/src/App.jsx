@@ -1,16 +1,8 @@
-import HScroll from "./components/HScroll";
-import Card from "./components/card";
-import Hero from "./components/carousel";
-import Navbar from "./components/navbar";
-
+import Home from "./components/Home";
 const App = () => {
 	return (
 		<>
-			<Navbar />
-			<Hero />
-			<Card />
-			<HScroll />
-			<Card />
+			<Home />
 		</>
 	);
 };
