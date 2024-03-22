@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "./navbar";
 
-const Mobiles = () => {
+const Fashion = () => {
 	return (
 		<>
-			<h1>Mobiles</h1>
+			<h1>Fashion</h1>
 		</>
 	);
 };
 
-export default Mobiles;
+export default Fashion;
