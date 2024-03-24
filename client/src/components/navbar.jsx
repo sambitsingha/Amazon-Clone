@@ -15,46 +15,33 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import { Link } from "react-router-dom";
 const Navbar = () => {
 	const [open, setOpen] = React.useState(false);
-	const [selectedCategory, setSelectedCategory] = React.useState(null);
 	const categories = [
-		{
-			name: "Mobiles , Computers",
-			subcategories: ["Mobiles", "Laptops", "Desktops"],
-		},
-		{ name: "Men's Fashion", subcategories: ["Shirts", "Pants", "Shoes"] },
-		{
-			name: "Sports, Fitness bags and lugage",
-			subcategories: ["Sports", "Fitness", "Bags"],
-		},
+		{ name: "Mobiles, Computers", path: "/mobiles" },
+		{ name: "Men's Fashion", path: "/fashion" },
+		{ name: "Sports, Fitness bags and luggage", path: "/sports" },
 	];
 	const toggleDrawer = (newOpen) => () => {
 		setOpen(newOpen);
-	};
-	const handleClick = (item) => {
-		if (item.subcategories) {
-			setSelectedCategory(item.subcategories);
-		} else {
-			toggleDrawer(false);
-		}
 	};
 
 	const DrawerList = (
 		<Box sx={{ width: 300 }} role='presentation'>
 			<List disablePadding>
-				{(selectedCategory ? selectedCategory : categories).map(
-					(item, index) => (
-						<ListItem key={item.name || item} disablePadding>
-							<ListItemButton onClick={() => handleClick(item)}>
-								<ListItemIcon>
-									{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-								</ListItemIcon>
-								<ListItemText primary={item.name || item} />
-							</ListItemButton>
-						</ListItem>
-					)
-				)}
+				{categories.map((item, index) => (
+					<ListItem key={item.name} disablePadding>
+						<ListItemButton>
+							<ListItemIcon>
+								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+							</ListItemIcon>
+							<Link to={item.path} onClick={toggleDrawer(false)}>
+								<ListItemText primary={item.name} />
+							</Link>
+						</ListItemButton>
+					</ListItem>
+				))}
 			</List>
 			<Divider />
 		</Box>
@@ -131,9 +118,6 @@ const Navbar = () => {
 				</h1>
 				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
 					Electronics
-				</h1>
-				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
-					Prime
 				</h1>
 				<h1 className='cursor-pointer hover:p-1 hover:border-white hover:border'>
 					Prime
