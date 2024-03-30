@@ -1,0 +1,4 @@
+.main-laptopfirst-container {
+  display: flex;
+  flex-direction: row;
+}

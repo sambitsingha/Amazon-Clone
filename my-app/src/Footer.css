@@ -1,0 +1,185 @@
+.main-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer-2 ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.Footer-1{
+    line-height: 19px;
+    background-color:#1e3045e0;
+    font-size: 13px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 0px;
+    color: white;
+   
+}
+.Footer-2{
+    background-color: #232F3E;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 40px 280px;
+    border-bottom: 1px solid rgb(192, 180, 180);
+}
+
+a{
+    text-decoration: none;
+    color: #e2e0e0;
+    font-size: 12px !important;
+}
+
+.footer-option{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 35px;
+}
+
+.Footer-2 ul{
+    margin-top: 13px;
+}
+
+.Footer-2 li{
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.Footer-2 li:hover{
+    text-decoration: underline;
+}
+
+.subfooter2-1{
+    display: flex;
+    flex-direction: column;
+    align-items: flexstart;
+}
+.four-two{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.four-two li:hover, 
+.three-three li:hover, 
+.three-four li:hover,
+.two-one li:hover{
+    text-decoration: underline;
+    color: white;
+}
+.footer-two ul{
+    margin-top: 13px;
+    list-style: none;
+}
+.footer-two li{
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.four-one-option > a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #e2e0e0;
+    font-size: 12px !important;
+}
+.footer-four{
+    display: flex;
+    flex-direction: column;
+    background-color: #131b22;
+    padding: 40px 310px;
+}
+.four-one{
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    grid-row-gap: 25px;
+    grid-column-gap: 40px;
+    padding: 10px 30px;
+    text-align: justify;
+}
+.Books{
+    font-weight: 400;
+}
+.art{
+    color: #a7a7a7;
+}
+.four-one-option:hover{
+    text-decoration: underline;
+    color: white;
+}
+.four-two ul{
+    list-style: none;
+    display: flex;
+    font-size: 12px;
+    gap: 20px;
+}
+.footer-three{
+    background-color: #041321e8;
+    padding: 40px 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px solid #313e4acc;
+}
+
+.three-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+
+}
+.three-one img{
+    width: 95px;
+    background-color: #05132100;
+}
+.three-one button{
+    background-color: #05132100;
+    color: #e2e0e0;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 12px;
+    gap: 8px;
+    font-weight: 500;
+    border: 1px solid #cccaca ;
+    border-radius: 3px;
+}
+.three-two{
+    display: flex;
+    flex-direction: column;
+}
+.three-three ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    list-style: none;
+    font-weight: 500;
+}
+.three-four ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    list-style: none;
+    font-weight: 500;
+    gap: 15px;
+    margin-top: 4px;
+}
+.footer-two a,.three-two a, .four-two {
+    text-decoration: none;
+    color: #e2e0e0;
+}
+
+
+

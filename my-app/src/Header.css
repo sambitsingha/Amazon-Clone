@@ -1,0 +1,273 @@
+.main-header {
+  height: 100px;
+  top: 0px;
+}
+.header-1 {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #10171f;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: white;
+}
+.header_logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.amazonimg {
+  width: 95px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.location {
+  display: flex;
+  align-items: last baseline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.location-span {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_search {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  flex: 1;
+}
+
+.header_searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.searchicon {
+  background-color: #cd9042;
+  color: black;
+  height: 22px !important;
+  padding: 5px;
+}
+
+.language {
+  display: flex;
+  color: white;
+  align-items: flex-end;
+  margin: 0px 15px 0px 15px;
+}
+.indiaimg {
+  width: 20px;
+  height: 15px;
+  align-items: last baseline;
+  background-color: black;
+  margin-right: 2px;
+}
+
+.header_nav {
+  display: flex;
+  
+}
+
+.header_option {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 15px 0px 15px;
+}
+
+.carticon {
+  margin: 5px 15px;
+}
+
+.cart {
+  display: flex;
+  align-items: last baseline;
+  margin-right: 5px;
+}
+
+.header-2 {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #1e3045;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: white;
+  justify-content: space-around;
+}
+.header-2option {
+  display: flex;
+  margin: 0px 0px 0px 10px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.box-hover {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  transition: border-color 0.1s ease-in-out;
+  
+}
+
+.box-hover:hover {
+  border-color: #ebe3e3;
+}
+
+.category-link {
+  color: black; 
+  text-decoration: none; 
+}
+
+.category-link:hover {
+  text-decoration: underline; 
+}
+
+
+ .nav-option2{
+  display: flex;
+  color: white;
+  align-items: last baseline;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.location-nav{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.nav-option-cart{
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+}
+.option-line1{
+  font-size: 13px;
+  font-weight: 500;
+}
+.option-line2{
+  font-size: 15px;
+  font-weight: 700;
+}
+.header-search{
+  display: flex;
+  flex: 0.8;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+}
+.header-searchInput{
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+.header-searchIcon{
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042; 
+}
+ .header-nav{
+  display: flex;
+ justify-content: space-evenly;
+}
+.Flag-img{
+  width: 25px;
+  height: 20px;
+  align-items: last baseline;
+  margin-left: 20px;
+}
+.nav-option3{
+  display: flex;
+  color: white;
+  align-items: flex-end;
+}
+.nav-option{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  cursor: pointer;
+}
+.LoginOut-cont{
+  position: absolute;
+  display: flex;
+  background-color: rgb(14, 13, 13);
+  color: white;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 7px;
+  font-weight: 700;
+  color: black;
+  margin-top: 24px;
+  margin-right: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1;
+  border-radius: 50px;
+
+}
+.logoutbutton{
+  position: absolute;
+  /* display: flex; */
+  background-color: rgb(244, 233, 233);
+  color: white;
+  /* flex-wrap: nowrap; */
+  /* align-items: center; */
+  padding: 7px;
+  width: 20px;
+  font-weight: 700;
+  color: black;
+  margin-top: 4px;
+  margin-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1;
+  font-size: 10px;
+  border-radius: 4px;
+}
+
+.categories-dropdown {
+  position: absolute;
+  top: calc(100% + 5px); /* Adjust the value according to your need */
+  left: 0;
+  background-color: rgb(99, 96, 96);
+  border: 2px solid #191717;
+  display: none; /* Initially hidden */
+}
+
+.header-2option:hover .categories-dropdown {
+  display: block; /* Display when parent is hovered */
+}
+
+/* Additional styling for the list items */
+.categories-dropdown ul {
+  list-style: none;
+  padding: 0;
+ 
+}
+
+.categories-dropdown li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+
+}
+
+.categories-dropdown li:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+

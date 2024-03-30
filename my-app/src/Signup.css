@@ -1,0 +1,70 @@
+.Signup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.Login-logo{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.Login-cont{
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  margin-bottom: 45px;
+}
+.Login-cont h1{
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.Login-cont form h5{
+  margin-bottom: 5px;
+
+}
+.Login-cont form input{
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 98%;
+  padding: 0 4px;
+
+}
+.Login-cont p{
+  margin-top: 15px;
+  font-size: 12px;
+}
+.Login-signIn{
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  font-size: 14px;
+  font-weight: 550;
+
+}
+.Login-page{
+  border: 1px solid;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border-color: darkgray;
+  font-size: 14px;
+  font-weight: 500;
+
+  
+}
+button{
+  cursor: pointer;
+}

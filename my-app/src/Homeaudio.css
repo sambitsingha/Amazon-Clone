@@ -1,0 +1,12 @@
+.homeaudio-main-container {
+  margin-right: 50px;
+}
+
+.first-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.second-row {
+  display: flex;
+}

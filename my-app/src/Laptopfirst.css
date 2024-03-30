@@ -1,0 +1,5 @@
+.main-laptopfirst-container {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 200px 5px 200px;
+}

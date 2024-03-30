@@ -1,0 +1,12 @@
+.Tablets-main-container{
+  margin-right: 70px;
+}
+first-row {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .second-row {
+    display: flex;
+  }
+  

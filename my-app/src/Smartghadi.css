@@ -1,0 +1,43 @@
+.main-Smartwatches-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  .top-image{
+      height: 250px;
+      width: 90%;
+  }
+  
+  .top-image-1{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+  
+  
+  .image-row{
+    display: flex;
+    justify-content: center;
+    
+  
+  }
+  .image-row-Smartwatches{
+    height: 195px;
+    margin-left: 10px;
+    margin-right: 10px;
+  
+   
+  }
+  .image_1{
+    height: 185px;
+    width: 145px;
+  
+  }
+  
+  
+  
+  
